@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const Home= styled.div`
-height: 77vh;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -18,7 +17,7 @@ export default class Homepage extends React.Component {
 
     return (
       <div>
-
+       
         <Home>
         <h1>LabeNinjas</h1>
         <p>O talento certo no momento certo</p>
