@@ -1,5 +1,6 @@
 import React from 'react'
-import { HeaderContainer } from "./styled"
+import { HeaderContainer } from "./headerStyled"
+
 
 
 class Header extends React.Component {
@@ -11,6 +12,7 @@ class Header extends React.Component {
                 <div>
                     <button >Home</button>
                     <button >Carrinho</button>
+                    <img src="/img/carrinho.png" alt="Icone de um carrinho de compras" />
                 </div>
             </HeaderContainer>
         )
