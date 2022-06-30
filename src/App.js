@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../src/components/header/header";
 import Homepage from "./pages/HomePage/homepage";
 import Footer from '../src/components/Footer/Footer';
+import Filtros from "./components/filtros/Filtros";
 import {createGlobalStyle} from 'styled-components';
 
 const EstiloPadrao = createGlobalStyle`
@@ -24,6 +25,14 @@ export default class App extends React.Component {
       <EstiloPadrao/>
         <Header />
         <Homepage />
+        
+        <Filtros
+        minimo={this.state.filtroMinimo}
+        maximo={this.state.filtroMaximo}
+        nome={this.state.filtroBuscaNome}
+        onChangeMinimo={this.manipulaValorMinimo}
+        onChangeMaximo={this.manipulaValorMaximo}
+        onChangeBuscaNome={this.manipulaBuscaNome}/>
         <Footer/>
       </div>
     );

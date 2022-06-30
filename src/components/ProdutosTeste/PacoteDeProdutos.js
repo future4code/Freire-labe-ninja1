@@ -1,4 +1,4 @@
-export const pacoteDeProdutos = [
+ const pacoteDeProdutos = [
     {
       id: 1,
       name: 'Produto legal',
@@ -24,3 +24,5 @@ export const pacoteDeProdutos = [
       photo: 'https://picsum.photos/200/200?a=4'
     }
   ]
+
+  export default pacoteDeProdutos;
