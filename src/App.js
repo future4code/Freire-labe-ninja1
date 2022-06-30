@@ -2,6 +2,17 @@ import React from "react";
 import Header from "../src/components/header/header";
 import Homepage from "./pages/HomePage/Homepage";
 import Filtros from "./components/Filtros";
+import {createGlobalStyle} from 'styled-components'
+
+const EstiloPadrao = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+  }`
+
+
 
 export default class App extends React.Component {
   state = {
@@ -25,8 +36,8 @@ export default class App extends React.Component {
 
        return (
       <div className="App">
+      <EstiloPadrao/>
         <Header />
-
         <Homepage />
 
         <Filtros
