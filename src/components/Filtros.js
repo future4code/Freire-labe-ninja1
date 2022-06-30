@@ -8,7 +8,7 @@ const BoxFiltro = styled.div`
     justify-content: space-between;
 `
 
-export default class Filtros extends React.Component {
+ class Filtros extends React.Component {
   
     render() {
     
@@ -25,7 +25,7 @@ export default class Filtros extends React.Component {
             value={this.props.maximo}
              onChange={this.props.onChangeMaximo}/>
            </label>
-           
+
            <label>Busca por nome:
             <input type={"text"}
              value={this.props.busca}
@@ -36,3 +36,4 @@ export default class Filtros extends React.Component {
 
   }
 }
+export default Filtros;
