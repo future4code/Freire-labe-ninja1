@@ -5,7 +5,7 @@ export const MainContainer = styled.div`
     background-color: #bf2d3a;
     display: flex;
     justify-content: center;
-    padding: 0.5rem;
+    height: 13vh;
     border-top: 1px solid black;
     color: white;
     font-size: smaller;

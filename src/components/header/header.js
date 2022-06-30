@@ -10,11 +10,10 @@ class Header extends React.Component {
                 <div>
                     <button >Home</button>
                     <button >Carrinho</button>
-                    <img src="/img/carrinho.png" alt="Icone de um carrinho de compras" />
                 </div>
             </HeaderContainer>
         )
     }
 }
 
-export default Header
+export default Header;
