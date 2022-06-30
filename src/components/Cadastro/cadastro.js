@@ -18,8 +18,6 @@ const DivCadastro = styled.div`
   height: 100%;
   background-color: #5f3a6e;
 
-
-
 h2{
   font-family: sans-serif;
   font-weight: bold;
@@ -71,7 +69,6 @@ button{
 }
 
 `
-
 
 class CadastroServico extends React.Component {
     state = {
