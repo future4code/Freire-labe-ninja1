@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import axios from 'axios';
 
 const DivCadastro = styled.div`
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,10 +15,10 @@ const DivCadastro = styled.div`
   font-size: 1em;
   font-size: larger;
   font-family: sans-serif;
-  height: 250%;
-  
+  height: 100%;
   background-color: #5f3a6e;
-  padding: 16px;
+
+
 
 h2{
   font-family: sans-serif;
@@ -58,10 +60,13 @@ button{
   background-color: #d4c4f2;
   border-radius: 6px;
   padding: 7px;
+  margin-bottom: 25px;
   width: 150px;
+  height: 40px;
   font-family: sans-serif;
   font-weight: bolder;
   box-shadow: 2px 2px 2px 2px rgba(0 0 0 0.2);
+
 
 }
 
@@ -95,12 +100,12 @@ class CadastroServico extends React.Component {
         titulo: this.state.InputTitulo,
         descricao: this.state.InputDescricao,
         preco: Number(this.state.InputPreco),
-        data: this.state.Inputdata
+        data: this.state.InputData
       };
 
     axios.post('https://labeninjas.herokuapp.com/jobs', body, {
       headers: {
-        Authorization: "da6c0cd6-f91f-4d45-b501-9777926af4d2"
+        Authorization: "653d8ecd-f76e-4494-99d6-662141b31319"
       }
     })
       .then((resposta) => {
@@ -140,6 +145,14 @@ class CadastroServico extends React.Component {
           onChange={this.onChangeInputPreco}
         />
 
+          <label>Prazo:</label>
+          <input 
+            placeholder='Prazo'  
+            type='date'
+            value={this.state.InputData}
+           onChange={this.onChangeInputData}
+          />
+
           <label>Formas de Pagamento</label>
             <select id='formaDePagamento'>       
               <option select disabled value=''>Selecione:</option>
@@ -151,10 +164,6 @@ class CadastroServico extends React.Component {
             </select>
             <br />
 
-          <label>Prazo:</label>
-          <input placeholder='Prazo' type='date'value={this.state.InputData}
-           // onChange={this.onChangeInputData}
-          />
         
         <button onClick={this.AdicionarServico}>CADASTRAR</button>
       </DivCadastro>
@@ -171,4 +180,3 @@ class CadastroServico extends React.Component {
 export default CadastroServico
 
 
-/// "key": "da6c0cd6-f91f-4d45-b501-9777926af4d2" ///
