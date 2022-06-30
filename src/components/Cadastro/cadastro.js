@@ -174,6 +174,6 @@ class CadastroServico extends React.Component {
   }
 }
 
-export default CadastroServico
+export default CadastroServico;
 
 
