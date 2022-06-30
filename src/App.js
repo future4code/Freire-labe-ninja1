@@ -30,7 +30,7 @@ escolherPagina = () => {
     case "list": 
     return <Produtos/>
     // case "cart":
-    // return <Carrinho/>
+    // return <Carrinho/> a editar
     case "form":
       return <CadastroServico />
       default:
