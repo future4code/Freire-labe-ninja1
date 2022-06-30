@@ -1,8 +1,6 @@
 import React from 'react'
 import { HeaderContainer } from "./headerStyled"
 
-
-
 class Header extends React.Component {
 
     render() {

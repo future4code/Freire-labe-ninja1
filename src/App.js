@@ -1,10 +1,10 @@
 import React from "react";
-
 import Header from "../src/components/header/header";
 import Homepage from "./pages/HomePage/Homepage";
 import Filtros from "./components/Filtros";
-import Footer from '../src/components/Footer/Footer'
-import {createGlobalStyle} from 'styled-components'
+import Cadastro from '../src/components/Cadastro/cadastro';
+import Footer from '../src/components/Footer/Footer';
+import {createGlobalStyle} from 'styled-components';
 
 const EstiloPadrao = createGlobalStyle`
   body {
@@ -38,9 +38,6 @@ export default class App extends React.Component {
 
        return (
       <div className="App">
-
-        
-
       <EstiloPadrao/>
         <Header />
         <Homepage />
