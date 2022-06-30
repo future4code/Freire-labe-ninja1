@@ -25,17 +25,16 @@ export default class App extends React.Component {
       <EstiloPadrao/>
         <Header />
         <Homepage />
-        
-        <Filtros
-        minimo={this.state.filtroMinimo}
-        maximo={this.state.filtroMaximo}
-        nome={this.state.filtroBuscaNome}
-        onChangeMinimo={this.manipulaValorMinimo}
-        onChangeMaximo={this.manipulaValorMaximo}
-        onChangeBuscaNome={this.manipulaBuscaNome}/>
         <Footer/>
       </div>
     );
   }
 }
 
+{/* <Filtros
+minimo={this.state.filtroMinimo}
+maximo={this.state.filtroMaximo}
+nome={this.state.filtroBuscaNome}
+onChangeMinimo={this.manipulaValorMinimo}
+onChangeMaximo={this.manipulaValorMaximo}
+onChangeBuscaNome={this.manipulaBuscaNome}/> */}
