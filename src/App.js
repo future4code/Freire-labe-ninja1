@@ -1,9 +1,10 @@
 import React from "react";
 import Header from "../src/components/header/header";
 import Homepage from "./pages/HomePage/homepage";
+import Produtos from "./HomeCard/Produtos/Produtos";
 import Footer from '../src/components/Footer/Footer';
-import Filtros from "./components/filtros/Filtros";
 import {createGlobalStyle} from 'styled-components';
+import CadastroServico from "./components/Cadastro/cadastro";
 
 const EstiloPadrao = createGlobalStyle`
   body {
@@ -15,26 +16,39 @@ const EstiloPadrao = createGlobalStyle`
 
 export default class App extends React.Component {
   state = {
-    
+    paginaAtual: "home", 
   };
   
+  trocarPagina = (NomePagina) => {
+    this.setState({ paginaAtual: NomePagina })
+  }
+
+escolherPagina = () => {
+  switch (this.state.paginaAtual) {
+    case "home": 
+    return <Homepage trocarPagina= {this.trocarPagina}/>
+    case "list": 
+    return <Produtos/>
+    // case "cart":
+    // return <Carrinho/>
+    case "form":
+      return <CadastroServico />
+      default:
+        return <Homepage trocarPagina={this.trocarPagina} />
+  }
+
+}
+
   render() {
 
        return (
       <div className="App">
       <EstiloPadrao/>
-        <Header />
-        <Homepage />
+        <Header trocarPagina= {this.trocarPagina} />
+        {this.escolherPagina()}
         <Footer/>
       </div>
     );
   }
 }
-
-{/* <Filtros
-minimo={this.state.filtroMinimo}
-maximo={this.state.filtroMaximo}
-nome={this.state.filtroBuscaNome}
-onChangeMinimo={this.manipulaValorMinimo}
-onChangeMaximo={this.manipulaValorMaximo}
-onChangeBuscaNome={this.manipulaBuscaNome}/> */}
+{/* <Homepage /> */}

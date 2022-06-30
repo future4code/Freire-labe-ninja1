@@ -8,7 +8,7 @@ class Header extends React.Component {
             <HeaderContainer>
                 <h2>LabeNinjas</h2>
                 <div>
-                    <button >Home</button>
+                    <button onClick={() => this.props.trocarPagina("home")} >Home</button>
                     <button >Carrinho</button>
                 </div>
             </HeaderContainer>
