@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import pacoteDeProdutos from "../ProdutosTeste/PacoteDeProdutos"
 
 const BoxFiltro = styled.div`
     border: 1px solid black;
@@ -10,40 +9,9 @@ const BoxFiltro = styled.div`
 `
 
  class Filtros extends React.Component {
-  state = {
-    filtroMinimo: "",
-    filtroMaximo: "",
-    filtroBuscaNome: "",
-  };
-  manipulaValorMinimo = (event) => {
-    this.setState({filtroMinimo: event.target.value});
-  };
 
-  manipulaValorMaximo = (event) => {
-    this.setState({filtroMaximo: event.target.value});
-  };
-
-  manipulaBuscaNome = (event) => {
-    this.setState({filtroBuscaNome: event.target.value});
-  };
-
-
-  
     render() {
 
-      const produtosFiltradosMin = pacoteDeProdutos.filter(produto =>{
-        if (this.state.filtroMinimo)
-          return produto.price >= this.state.filtroMinimo
-        }
-      )
-      const produtosFiltradosMax = pacoteDeProdutos.filter(produto =>{
-        if (this.state.filtroMinimo)
-          return produto.price <= this.state.filtroMaximo
-        }
-      )
-
-
-    
         return <BoxFiltro>
 
            <label>Filtro Mínimo:
@@ -60,7 +28,7 @@ const BoxFiltro = styled.div`
 
            <label>Busca por nome:
             <input type={"text"}
-             value={this.props.busca}
+             value={this.props.nome}
              onChange={this.props.onChangeBuscaNome}/>
            </label>
 
