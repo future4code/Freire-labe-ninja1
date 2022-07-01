@@ -4,6 +4,7 @@ const colecaoDeProdutos = [
         id: 1,
         nome: "Almoços Saudáveis",
         preco: 17,
+        prazo: "01/10/2022",
         imagem: "/img/Almoços.jpg"
     },
     {

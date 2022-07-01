@@ -6,6 +6,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+height: 80vh; 
 `
 
 const Botoes= styled.div`
@@ -17,13 +18,12 @@ export default class Homepage extends React.Component {
 
     return (
       <div>
-       
         <Home>
         <h1>LabeNinjas</h1>
         <p>O talento certo no momento certo</p>
         <Botoes>
-        <button>Quero ser um ninja</button>
-        <button>Contratar um ninja</button>
+        <button onClick={() => this.props.trocarPagina("form")}>Quero ser um ninja</button>
+        <button onClick={() => this.props.trocarPagina("list")}>Contratar um ninja</button>
         </Botoes>
     </Home>
     </div>

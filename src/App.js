@@ -1,11 +1,12 @@
 import React from "react";
-
 import Header from "../src/components/header/header";
-import Homepage from "./pages/HomePage/Homepage";
-import Filtros from "./components/Filtros";
-import Footer from '../src/components/Footer/Footer'
-import {createGlobalStyle} from 'styled-components'
-
+import Homepage from "./pages/HomePage/homepage";
+import Produtos from "./HomeCard/Produtos/Produtos";
+import Footer from '../src/components/Footer/Footer';
+import {createGlobalStyle} from 'styled-components';
+import CadastroServico from "./components/Cadastro/cadastro";
+import CarrinhoPage from "./pages/carrinhoPage/carrinhoPage";
+//ok
 const EstiloPadrao = createGlobalStyle`
   body {
     margin: 0;
@@ -14,48 +15,62 @@ const EstiloPadrao = createGlobalStyle`
     min-height: 100vh;
   }`
 
-
-
 export default class App extends React.Component {
   state = {
-    filtroMinimo: "",
-    filtroMaximo: "",
-    filtroBuscaNome: "",
+    paginaAtual: "home", 
+    detalhesDoServico: "",
+    carrinho: []
   };
-  manipulaValorMinimo = (event) => {
-    this.setState({filtroMinimo: event.target.value});
-  };
+  
+  trocarPagina = (NomePagina) => {
+    this.setState({ paginaAtual: NomePagina })
+  }
 
-  manipulaValorMaximo = (event) => {
-    this.setState({filtroMaximo: event.target.value});
-  };
+  adicionarCarrinho = (produto) => {
+    const novoCarrinho = [...this.state.carrinho, produto]
+    this.setState({carrinho: novoCarrinho})
+    alert(`O serviço ${produto.nome} foi adicionado ao carrinho`)
+  }
 
-  manipulaBuscaNome = (event) => {
-    this.setState({filtroBuscaNome: event.target.value});
-  };
+  removerCarrinho = (id) => {
+    const deletar = window.confirm("Tem certeza que deseja remover este serviço?")
+    if (deletar){
+      const novoCarrinho = this.state.carrinho.filter((itemCarrinho) => {
+        return itemCarrinho.id !== id
+      })
+      this.setState({carrinho: novoCarrinho})
+    }
+  }
+
+  limparCarrinho = () => {
+    this.setState({carrinho: []})
+    alert("Obrigado em contratar nossos serviços!")
+  }
+
+escolherPagina = () => {
+  switch (this.state.paginaAtual) {
+    case "home": 
+    return <Homepage trocarPagina= {this.trocarPagina}/>
+    case "list": 
+    return <Produtos adicionarCarrinho={this.adicionarCarrinho}/>
+    case "cart":
+    return <CarrinhoPage trocarPagina={this.trocarPagina} carrinho={this.state.carrinho} removerCarrinho={this.removerCarrinho} limparCarrinho={this.limparCarrinho}/>
+    case "form":
+      return <CadastroServico />
+      default:
+        return <Homepage trocarPagina={this.trocarPagina} />
+  }
+
+}
 
   render() {
-
        return (
       <div className="App">
-
-        
-
       <EstiloPadrao/>
-        <Header />
-        <Homepage />
+        <Header trocarPagina= {this.trocarPagina} />
+        {this.escolherPagina()}
         <Footer/>
-        <Filtros
-          minimo={this.state.filtroMinimo}
-          maximo={this.state.filtroMaximo}
-          nome={this.state.filtroBuscaNome}
-          onChangeMinimo={this.manipulaValorMinimo}
-          onChangeMaximo={this.manipulaValorMaximo}
-          onChangeBuscaNome={this.manipulaBuscaNome}
-        />
-
       </div>
     );
   }
 }
-

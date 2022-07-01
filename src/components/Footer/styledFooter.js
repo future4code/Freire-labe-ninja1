@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
-    background-color: #bf2d3a;
+    background-color: #ffcef9;
     display: flex;
     justify-content: center;
     padding: 0.5rem;
     border-top: 1px solid black;
-    color: white;
+    color: black;
     font-size: smaller;
     
     @media(max-width: 550px){
@@ -33,4 +33,4 @@ export const TextoFooter = styled.div`
 export const IconesRedesSociais = styled.img`
     height: 5vh;
     margin: 5px;
-// `
+`

@@ -1,8 +1,6 @@
 import React from 'react'
 import { HeaderContainer } from "./headerStyled"
 
-
-
 class Header extends React.Component {
 
     render() {
@@ -10,13 +8,12 @@ class Header extends React.Component {
             <HeaderContainer>
                 <h2>LabeNinjas</h2>
                 <div>
-                    <button >Home</button>
-                    <button >Carrinho</button>
-                    <img src="/img/carrinho.png" alt="Icone de um carrinho de compras" />
+                    <button onClick={() => this.props.trocarPagina("home")} >Home</button>
+                    <button onClick={() => this.props.trocarPagina("cart")} >Carrinho</button>
                 </div>
             </HeaderContainer>
         )
     }
 }
 
-export default Header
+export default Header;
