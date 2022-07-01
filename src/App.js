@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../src/components/header/header";
-import Homepage from "./pages/HomePage/homepage";
+import Homepage from "./pages/HomePage/Homepage";
 import Produtos from "./HomeCard/Produtos/Produtos";
 import Footer from '../src/components/Footer/Footer';
 import {createGlobalStyle} from 'styled-components';
