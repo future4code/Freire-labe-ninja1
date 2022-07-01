@@ -32,6 +32,9 @@ export default class Produtos extends React.Component {
     this.setState({ filtroBuscaNome: event.target.value });
   };
 
+
+
+
   render() {
     let produtosFiltrados = colecaoDeProdutos;
 

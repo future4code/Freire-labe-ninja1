@@ -4,12 +4,11 @@ import CarrinhoCard from "../../components/Carrinho/carrinhoCard";
 class CarrinhoPage extends React.Component {
     render () {
         const carrinhoSalvar = this.props.carrinho.map ((item)=>{
-            return <CarrinhoCard key={item.id} title={item.nome} price={item.preco} id={item.id} deletarCarrinho={this.props.deletarCarrinho} />
+            return <CarrinhoCard key={item.id} title={item.title} price={item.price} id={item.id} deletarCarrinho={this.props.deletarCarrinho} />
         })
         let precoTotal = 0
-
-        this.props.carrinho.forEach((item) => {
-            precoTotal += item.preco
+        this.props.carrinho.forEach((produto) => {
+            precoTotal += produto.price
         })
 
         return (
@@ -19,9 +18,9 @@ class CarrinhoPage extends React.Component {
                  {carrinhoSalvar.length > 0 ? (
                     <div>
                         {carrinhoSalvar}
-                        <span>Total: R${precoTotal.preco}</span>
+                        <span>Total: R${precoTotal}</span>
                         <button onClick={() => this.props.limparCarrinho()}>Finalizar Compra</button>
-                        <button onClick={() => this.props.trocarPagina("list")}>Voltar para a Lista</button>
+                        <button onClick={() => this.props.trocarPagina("list")}>Voltar para opções de serviços</button>
                     </div>
                     ) : (
                     <h3>Ops, Carrinho Vazio!</h3>
