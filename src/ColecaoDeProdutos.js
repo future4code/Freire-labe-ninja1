@@ -31,43 +31,43 @@ const colecaoDeProdutos = [
         imagem: "/img/Depilação.jpg"
     },
     {
-        id: 1,
+        id: 6,
         nome: "Diarista",
         preco: 150,
         imagem: "/img/Diarista.jpg"
     },
     {
-        id: 1,
+        id: 7,
         nome: "Eletricista",
         preco: 200,
         imagem: "/img/Eletricista.jpg"
     },
     {
-        id: 1,
+        id: 8,
         nome: "Manicure e Pedicure",
         preco: 50,
         imagem: "/img/Manicure.jpg"
     },
     {
-        id: 1,
+        id: 9,
         nome: "Pacotes de viagens",
         preco: 500,
         imagem: "/img/Viagens.jpg"
     },
     {
-        id: 1,
+        id: 10,
         nome: "Papelaria",
         preco: 5,
         imagem: "/img/Papelaria.jpg"
     },
     {
-        id: 1,
+        id: 11,
         nome: "Pintor",
         preco: 200,
         imagem: "/img/Pintor.jpg"
     },
     {
-        id: 1,
+        id: 12,
         nome: "Vestidos de festa",
         preco: 225,
         imagem: "/img/vestidos.jpg"

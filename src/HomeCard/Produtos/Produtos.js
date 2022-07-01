@@ -26,8 +26,8 @@ export default class Produtos extends React.Component {
                  imagem={produto.imagem}
                  nome = {produto.nome}
                  alt= {produto.nome}
-                 preco={produto.price}
-                 onclick={() => this.props.onClick(produto)}
+                 preco={produto.preco}
+                //  onclick={() => this.props.onClick(produto)}
                 />
             )
         })

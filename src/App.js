@@ -18,13 +18,13 @@ const EstiloPadrao = createGlobalStyle`
 export default class App extends React.Component {
   state = {
     paginaAtual: "home", 
+    detalhesDoServico: "",
     carrinho: []
   };
   
   trocarPagina = (NomePagina) => {
     this.setState({ paginaAtual: NomePagina })
   }
-
 
   adicionarCarrinho = (produto) => {
     const novoCarrinho = [...this.state.carrinho, produto]
@@ -52,7 +52,7 @@ escolherPagina = () => {
     case "home": 
     return <Homepage trocarPagina= {this.trocarPagina}/>
     case "list": 
-    return <Produtos/>
+    return <Produtos adicionarCarrinho={this.adicionarCarrinho}/>
     case "cart":
     return <CarrinhoPage trocarPagina={this.trocarPagina} carrinho={this.state.carrinho} removerCarrinho={this.removerCarrinho} limparCarrinho={this.limparCarrinho}/>
     case "form":
@@ -64,7 +64,6 @@ escolherPagina = () => {
 }
 
   render() {
-
        return (
       <div className="App">
       <EstiloPadrao/>
@@ -75,4 +74,3 @@ escolherPagina = () => {
     );
   }
 }
-{/* <Homepage /> */}
