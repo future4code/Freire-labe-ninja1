@@ -6,9 +6,9 @@ class Header extends React.Component {
     render() {
         return (
             <HeaderContainer>
-                <h2>LabeNinjas</h2>
+                <h1></h1>
                 <div>
-                    <button >Home</button>
+                    <button>Home</button>
                     <button >Carrinho</button>
                 </div>
             </HeaderContainer>

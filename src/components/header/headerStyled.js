@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 
 export const HeaderContainer = styled.div`
+    background-color: green;
     border: 1px solid black;
     background-color: black;
     padding: 0 0;
@@ -10,5 +11,6 @@ export const HeaderContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     color: white;
-    height: 10vh;
+    height: 100%;
+    
 `
