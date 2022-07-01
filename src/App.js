@@ -5,6 +5,7 @@ import Produtos from "./HomeCard/Produtos/Produtos";
 import Footer from '../src/components/Footer/Footer';
 import {createGlobalStyle} from 'styled-components';
 import CadastroServico from "./components/Cadastro/cadastro";
+import CarrinhoPage from "./pages/carrinhoPage/carrinhoPage";
 
 const EstiloPadrao = createGlobalStyle`
   body {
@@ -17,10 +18,33 @@ const EstiloPadrao = createGlobalStyle`
 export default class App extends React.Component {
   state = {
     paginaAtual: "home", 
+    carrinho: []
   };
   
   trocarPagina = (NomePagina) => {
     this.setState({ paginaAtual: NomePagina })
+  }
+
+
+  adicionarCarrinho = (produto) => {
+    const novoCarrinho = [...this.state.carrinho, produto]
+    this.setState({carrinho: novoCarrinho})
+    alert(`O serviço ${produto.nome} foi adicionado ao carrinho`)
+  }
+
+  removerCarrinho = (id) => {
+    const deletar = window.confirm("Tem certeza que deseja remover este serviço?")
+    if (deletar){
+      const novoCarrinho = this.state.carrinho.filter((itemCarrinho) => {
+        return itemCarrinho.id !== id
+      })
+      this.setState({carrinho: novoCarrinho})
+    }
+  }
+
+  limparCarrinho = () => {
+    this.setState({carrinho: []})
+    alert("Obrigado em contratar nossos serviços!")
   }
 
 escolherPagina = () => {
@@ -29,8 +53,8 @@ escolherPagina = () => {
     return <Homepage trocarPagina= {this.trocarPagina}/>
     case "list": 
     return <Produtos/>
-    // case "cart":
-    // return <Carrinho/> a editar
+    case "cart":
+    return <CarrinhoPage trocarPagina={this.trocarPagina} carrinho={this.state.carrinho} removerCarrinho={this.removerCarrinho} limparCarrinho={this.limparCarrinho}/>
     case "form":
       return <CadastroServico />
       default:
