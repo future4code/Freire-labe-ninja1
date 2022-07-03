@@ -1,12 +1,11 @@
 import React from "react";
 import Header from "../src/components/header/header";
-import Homepage from "./pages/HomePage/Homepage";
+import Homepage from "./pages/HomePage/homepage";
 import Produtos from "./HomeCard/Produtos/Produtos";
 import Footer from '../src/components/Footer/Footer';
 import {createGlobalStyle} from 'styled-components';
 import CadastroServico from "./components/Cadastro/cadastro";
 import CarrinhoPage from "./pages/carrinhoPage/carrinhoPage";
-
 
 const EstiloPadrao = createGlobalStyle`
   body {

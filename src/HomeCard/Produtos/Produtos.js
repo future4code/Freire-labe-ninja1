@@ -10,8 +10,7 @@ const SelectContainer = styled.div`
 `;
 const ElementosCards = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
   margin-top: 10px;
 `;
@@ -20,8 +19,6 @@ export default class Produtos extends React.Component {
     filtroMinimo: "",
     filtroMaximo: "",
     filtroBuscaNome: "",
-    ordenacao: ""
-
   };
   manipulaValorMinimo = (event) => {
     this.setState({ filtroMinimo: event.target.value });
@@ -35,9 +32,6 @@ export default class Produtos extends React.Component {
     this.setState({ filtroBuscaNome: event.target.value });
   };
 
-
-  manipulaOrdenacao = (event) => {
-    this.setState({ ordenacao: event.target.value })
 
   render() {
     let produtosFiltrados = colecaoDeProdutos;
@@ -69,9 +63,8 @@ export default class Produtos extends React.Component {
           imagem={produto.imagem} 
           nome={produto.nome}
           alt={produto.nome}
-          dataFinal={produto.Data}
-
           preco={produto.price}
+          dueDate={produto.dueDate}
           onclick={() => this.props.onClick(produto)}
         />
       );
@@ -87,8 +80,6 @@ export default class Produtos extends React.Component {
             onChangeMinimo={this.manipulaValorMinimo}
             onChangeMaximo={this.manipulaValorMaximo}
             onChangeBuscaNome={this.manipulaBuscaNome}
-            onChangeOrdenacao={this.manipulaOrdenacao}
-
           />
 
           <label>Ordenar por:</label>
@@ -106,3 +97,4 @@ export default class Produtos extends React.Component {
     );
   }
 }
+

@@ -12,6 +12,4 @@ class CarrinhoCard extends React.Component  {
         )
     }
 }
-
 export default CarrinhoCard; 
-

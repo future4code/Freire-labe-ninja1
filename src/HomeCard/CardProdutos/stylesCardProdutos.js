@@ -1,8 +1,8 @@
 import styled from "styled-components"
-//ok
+
 
 export const CardDosProdutos = styled.div`
-    border: 1px solid black;
+    border: 1px solid red;
     display: flex;
     flex-direction: column;
   
