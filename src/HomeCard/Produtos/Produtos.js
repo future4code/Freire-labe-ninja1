@@ -35,9 +35,9 @@ export default class Produtos extends React.Component {
     this.setState({ filtroBuscaNome: event.target.value });
   };
 
+
   manipulaOrdenacao = (event) => {
     this.setState({ ordenacao: event.target.value })
-}
 
   render() {
     let produtosFiltrados = colecaoDeProdutos;
@@ -66,7 +66,7 @@ export default class Produtos extends React.Component {
       return (
         <CardProdutos
           key={produto.id}
-          imagem={produto.imagem}
+          imagem={produto.imagem} 
           nome={produto.nome}
           alt={produto.nome}
           dataFinal={produto.Data}

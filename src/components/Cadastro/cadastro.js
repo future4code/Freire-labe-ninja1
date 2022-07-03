@@ -94,7 +94,7 @@ class CadastroServico extends React.Component {
         description: this.state.InputDescricao,
         price: Number(this.state.InputPreco),
         paymentMethods: this.state.modoDePagamento,
-        dueDate: "2022-12-30",
+        dueDate: this.state.InputData,
       };
 
     axios.post(url, body, {
@@ -132,10 +132,10 @@ render() {
         <option>Pix</option>
       </select>
 
-      <input type="date" value={this.state.prazo} onChange={this.atualizaPrazo}></input>
+      <input type="date" value={this.state.InputData} onChange={this.onChangeInputData}></input>
+
 
       {/* <input type="date" value={this.state.prazo} onChange={this.atualizaPrazo}></input> */}
-
       <button onClick={this.adicionarServico}>Cadastrar Serviço</button>
     </DivCadastro>
   )
