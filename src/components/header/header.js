@@ -13,7 +13,6 @@ export const HeaderContainer = styled.div`
     color: white;
     height: 100vh;
 
-
     img {
         width: 35em; 
     }
@@ -26,8 +25,6 @@ export const HeaderSobreposto = styled.div`
     clip-path: polygon(0 0, 52% 0, 100% 100%, 0 100%);
 	width: 50%;
 	background-color: #35356E;
-    /* height: 100vh; */
-
 
 `
 
@@ -48,34 +45,36 @@ export const TituloHeader = styled.div`
 	font-weight: bolder;
 	width: 400px;
 	color:#FF1823;
-	margin: 50px 250px;
+	margin: 50px 200px;
 }
 
     p {
         width: 400px;
-        margin: 50px 250px;
+        margin: 50px 200px;
     }
-
-    button {
-	left: 126.5px;
-    display: block;
-    border-style: none;
-    border-radius: 10px;
-    width: 206px;
-    height: 42px;
-    background: #FF1823;
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 19px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    margin: 35px auto;
-    cursor: pointer; 
-}
 `
 
 const BotoesNav = styled.div`
-    background-color: green; 
+    display: flex;
+	margin-bottom: 500px;
+    margin-left: 950px;
+    position: absolute;
+    
+    button {
+    font-size: 3vh; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color:transparent;
+    text-decoration: none;
+    border:none;
+    color:white;
+    height: 5em;
+
+        :hover {
+	color: #FF1823;
+	text-decoration: underline;
+    ; 
+    }
+}
     
 `
 
@@ -85,18 +84,17 @@ class Header extends React.Component {
     render() {
         return (
             <HeaderContainer>
+                <BotoesNav>
+                    <button onClick={() => this.props.trocarPagina("home")} >HOME</button>
+                    <button onClick={() => this.props.trocarPagina("cart")} >CARRINHO</button>
+                </BotoesNav>
                 <HeaderSobreposto>
                 <img src='/img/Labeninja.png'></img>
                 </HeaderSobreposto>
                 <TituloHeader>
                     <h1>Vender e contratar no Labeninja é muito mais fácil que você imagina</h1>
                     <p>Pare de perder tempo procurando, ofereça ou contrate serviços com a Labeninja e garanta os melhores profissionais em sua equipe!</p>
-                    <button onClick={() => this.props.trocarPagina("cart")} >Carrinho</button>
                 </TituloHeader> 
-                <BotoesNav>
-                    <button onClick={() => this.props.trocarPagina("home")} >Home</button>
-                    <button onClick={() => this.props.trocarPagina("cart")} >Carrinho</button>
-                </BotoesNav>
             </HeaderContainer>
         )
     }
