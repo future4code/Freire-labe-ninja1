@@ -1,4 +1,4 @@
-# 🥷 Projeto LabeNinjas
+# 🐱‍👤 Projeto LabeNinjas
 Olá, vender e contratar no Labeninja é muito mais fácil que você imagina.
 
 ## ✅ Requisitos
@@ -9,13 +9,13 @@ Olá, vender e contratar no Labeninja é muito mais fácil que você imagina.
 - [x] Botões irteligando telas;
 - [x] Filtrar por valor mínimo e máximo;
 - [x] Filtrar nome do produto;
-- [] Carrinho - lógica criada, mas não funciona ao adicionar itens.
+- [ ] Carrinho - lógica criada, mas não funciona ao adicionar itens.
 
 ## 🛠 Tecnologias utilizadas
 - React
 - Styled Components  
 
-## 👨‍🚀 Desenolvedores
+## 👩🏻‍💻 Desenvolvedores
 - Gustavo Monteiro
 - Gustavo William 
 - Aline Chagas
