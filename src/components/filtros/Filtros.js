@@ -29,6 +29,7 @@ const BoxFiltro = styled.div`
            <label>Busca por nome:
             <input type={"text"}
              value={this.props.nome}
+
              onChange={this.props.onChangeBuscaNome}/>
            </label>
 

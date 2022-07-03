@@ -54,9 +54,7 @@ button{
   height: 40px;
   font-family: sans-serif;
   box-shadow: 2px 2px 2px 2px rgba(0 0 0 0.2);
-
 }
-
 `
 
 class CadastroServico extends React.Component {
@@ -133,7 +131,11 @@ render() {
         <option>Boleto</option>
         <option>Pix</option>
       </select>
+
+      <input type="date" value={this.state.prazo} onChange={this.atualizaPrazo}></input>
+
       {/* <input type="date" value={this.state.prazo} onChange={this.atualizaPrazo}></input> */}
+
       <button onClick={this.adicionarServico}>Cadastrar Serviço</button>
     </DivCadastro>
   )
@@ -141,3 +143,4 @@ render() {
 }
 
 export default CadastroServico;
+
