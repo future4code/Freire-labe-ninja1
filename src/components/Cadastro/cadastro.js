@@ -16,6 +16,7 @@ const DivCadastro = styled.div`
   font-size: larger;
   font-family: sans-serif;
   height: 100%;
+  background-color: #b6b4b4;
 
 h2{
   font-family: sans-serif;
@@ -56,6 +57,7 @@ button{
   background: #FF1823;
   border-style: none;
   border-radius: 10px;
+  color:white;
 
 }
 
