@@ -4,9 +4,9 @@ import Homepage from "./pages/HomePage/Homepage";
 import Produtos from "./HomeCard/Produtos/Produtos";
 import Footer from '../src/components/Footer/Footer';
 import {createGlobalStyle} from 'styled-components';
-import CadastroServico from "./components/Cadastro/cadastro";
+import Cadastro from "./components/Cadastro/cadastro";
 import CarrinhoPage from "./pages/carrinhoPage/carrinhoPage";
-//ok
+
 const EstiloPadrao = createGlobalStyle`
   body {
     margin: 0;
@@ -19,7 +19,9 @@ export default class App extends React.Component {
   state = {
     paginaAtual: "home", 
     detalhesDoServico: "",
-    carrinho: []
+    carrinho: [],
+    adicionados: false,
+    quantidade: 0,
   };
   
   trocarPagina = (NomePagina) => {
@@ -56,7 +58,7 @@ escolherPagina = () => {
     case "cart":
     return <CarrinhoPage trocarPagina={this.trocarPagina} carrinho={this.state.carrinho} removerCarrinho={this.removerCarrinho} limparCarrinho={this.limparCarrinho}/>
     case "form":
-      return <CadastroServico />
+      return <Cadastro/>
       default:
         return <Homepage trocarPagina={this.trocarPagina} />
   }

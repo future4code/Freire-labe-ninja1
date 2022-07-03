@@ -10,13 +10,14 @@ class Carrinho extends React.Component{
 
     };
 
-    adicionarItemCarrinho = (item) => {
+    // adicionarItemCarrinho = (item) => {
 
-    }
+    // }
 
-    removerItemCarrinho = (item) => {
+    // removerItemCarrinho = (item) => {
+        
 
-    }
+    // }
 
     render() {
         const itensCarrinho = this.props.carrinho && this.props.carrinho.map(item => {

@@ -52,7 +52,7 @@ button{
 }
 `
 
-class CadastroServico extends React.Component {
+class Cadastro extends React.Component {
     state = {
       InputTitulo: "",
       InputDescricao: "",
@@ -133,4 +133,4 @@ render() {
 }
 }
 
-export default CadastroServico;
+export default Cadastro;
