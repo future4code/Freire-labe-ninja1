@@ -6,7 +6,8 @@ import Footer from '../src/components/Footer/Footer';
 import {createGlobalStyle} from 'styled-components';
 import CadastroServico from "./components/Cadastro/cadastro";
 import CarrinhoPage from "./pages/carrinhoPage/carrinhoPage";
-//ok
+
+
 const EstiloPadrao = createGlobalStyle`
   body {
     margin: 0;

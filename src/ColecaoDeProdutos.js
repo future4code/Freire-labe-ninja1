@@ -3,74 +3,73 @@ const colecaoDeProdutos = [
     {
         id: 1,
         nome: "Almoços Saudáveis",
-        preco: 17,
-        prazo: "01/10/2022",
+        price: 17,
         imagem: "/img/Almoços.jpg"
     },
     {
         id: 2,
         nome: "Artesanato em vidro",
-        preco: 30,
+        price: 30,
         imagem: "/img/Artesanato.jpg"
     },
     {
         id: 3,
         nome: "Cuidador de idosos",
-        preco: 180,
+        price: 180,
         imagem: "/img/Cuidador.jpg"
     },
     {
         id: 4,
         nome: "Curso de fotografia",
-        preco: 3000,
+        price: 3000,
         imagem: "/img/Fotografia.jpg"
     },
     {
         id: 5,
         nome: "Depilação a laser",
-        preco: 400,
+        price: 400,
         imagem: "/img/Depilação.jpg"
     },
     {
-        id: 1,
+        id: 6,
         nome: "Diarista",
-        preco: 150,
+        price: 150,
         imagem: "/img/Diarista.jpg"
     },
     {
-        id: 1,
+        id: 7,
         nome: "Eletricista",
-        preco: 200,
+        price: 200,
         imagem: "/img/Eletricista.jpg"
     },
     {
-        id: 1,
+        id: 8,
         nome: "Manicure e Pedicure",
-        preco: 50,
+        price: 50,
         imagem: "/img/Manicure.jpg"
     },
     {
-        id: 1,
+        id: 9,
         nome: "Pacotes de viagens",
-        preco: 500,
+        price: 500,
         imagem: "/img/Viagens.jpg"
     },
     {
-        id: 1,
+        id: 10,
         nome: "Papelaria",
-        preco: 5,
+        price: 5,
         imagem: "/img/Papelaria.jpg"
     },
     {
-        id: 1,
+        id: 11,
         nome: "Pintor",
-        preco: 200,
+        price: 200,
         imagem: "/img/Pintor.jpg"
     },
     {
-        id: 1,
+        id: 12,
         nome: "Vestidos de festa",
-        preco: 225,
+        price: 225,
         imagem: "/img/vestidos.jpg"
     }
 ]

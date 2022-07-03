@@ -16,12 +16,14 @@ const DivCadastro = styled.div`
   font-size: larger;
   font-family: sans-serif;
   height: 100%;
+
 h2{
   font-family: sans-serif;
   font-weight: bold;
   color:#190f2b;
   
 }
+
 input{
   margin-bottom: 0.2em;
   border-radius: 6px;
@@ -30,9 +32,11 @@ input{
   font-family: sans-serif;
   
 }
+
 label{
   font-family: sans-serif;
 }
+
 select{
   margin-bottom: 0.2em;
   border-radius: 3px;
@@ -40,6 +44,7 @@ select{
   width: 180px;
   font-family: sans-serif;
 }
+
 button{
   margin-bottom: 0.2em;
   border-radius: 6px;
@@ -126,7 +131,11 @@ render() {
         <option>Boleto</option>
         <option>Pix</option>
       </select>
+
       <input type="date" value={this.state.prazo} onChange={this.atualizaPrazo}></input>
+
+      {/* <input type="date" value={this.state.prazo} onChange={this.atualizaPrazo}></input> */}
+
       <button onClick={this.adicionarServico}>Cadastrar Serviço</button>
     </DivCadastro>
   )
@@ -134,3 +143,4 @@ render() {
 }
 
 export default CadastroServico;
+
