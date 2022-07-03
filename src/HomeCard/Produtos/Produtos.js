@@ -33,8 +33,6 @@ export default class Produtos extends React.Component {
   };
 
 
-
-
   render() {
     let produtosFiltrados = colecaoDeProdutos;
 
@@ -62,7 +60,7 @@ export default class Produtos extends React.Component {
       return (
         <CardProdutos
           key={produto.id}
-          imagem={produto.imagem}
+          imagem={produto.imagem} 
           nome={produto.nome}
           alt={produto.nome}
           preco={produto.price}

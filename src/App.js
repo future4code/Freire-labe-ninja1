@@ -26,10 +26,11 @@ export default class App extends React.Component {
     this.setState({ paginaAtual: NomePagina })
   }
 
-  adicionarCarrinho = (produto) => {
-    const novoCarrinho = [...this.state.carrinho, produto]
+
+  adicionarCarrinho = (servico) => {
+    const novoCarrinho = [...this.state.carrinho, servico]
     this.setState({carrinho: novoCarrinho})
-    alert(`O serviço ${produto.nome} foi adicionado ao carrinho`)
+    alert(`O serviço ${servico.nome} foi adicionado ao carrinho`)
   }
 
   removerCarrinho = (id) => {
@@ -56,7 +57,7 @@ escolherPagina = () => {
     case "cart":
     return <CarrinhoPage trocarPagina={this.trocarPagina} carrinho={this.state.carrinho} removerCarrinho={this.removerCarrinho} limparCarrinho={this.limparCarrinho}/>
     case "form":
-      return <CadastroServico />
+      return <CadastroServico/>
       default:
         return <Homepage trocarPagina={this.trocarPagina} />
   }
