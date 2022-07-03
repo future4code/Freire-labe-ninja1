@@ -53,7 +53,9 @@ button{
   width: 150px;
   height: 40px;
   font-family: sans-serif;
-  box-shadow: 2px 2px 2px 2px rgba(0 0 0 0.2);
+  background: #FF1823;
+  border-style: none;
+  border-radius: 10px;
 
 }
 
