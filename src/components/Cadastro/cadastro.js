@@ -16,12 +16,15 @@ const DivCadastro = styled.div`
   font-size: larger;
   font-family: sans-serif;
   height: 100%;
+  background-color: #b6b4b4;
+
 h2{
   font-family: sans-serif;
   font-weight: bold;
   color:#190f2b;
   
 }
+
 input{
   margin-bottom: 0.2em;
   border-radius: 6px;
@@ -30,9 +33,11 @@ input{
   font-family: sans-serif;
   
 }
+
 label{
   font-family: sans-serif;
 }
+
 select{
   margin-bottom: 0.2em;
   border-radius: 3px;
@@ -40,6 +45,7 @@ select{
   width: 180px;
   font-family: sans-serif;
 }
+
 button{
   margin-bottom: 0.2em;
   border-radius: 6px;
@@ -48,8 +54,13 @@ button{
   width: 150px;
   height: 40px;
   font-family: sans-serif;
-  box-shadow: 2px 2px 2px 2px rgba(0 0 0 0.2);
+  background: #FF1823;
+  border-style: none;
+  border-radius: 10px;
+  color:white;
+
 }
+
 `
 
 class Cadastro extends React.Component {
@@ -89,7 +100,7 @@ class Cadastro extends React.Component {
         description: this.state.InputDescricao,
         price: Number(this.state.InputPreco),
         paymentMethods: this.state.modoDePagamento,
-        dueDate: "2022-12-30",
+        dueDate: this.state.InputData,
       };
 
     axios.post(url, body, {
@@ -126,7 +137,7 @@ render() {
         <option>Boleto</option>
         <option>Pix</option>
       </select>
-      <input type="date" value={this.state.prazo} onChange={this.atualizaPrazo}></input>
+      <input type="date" value={this.state.InputData} onChange={this.onChangeInputData}></input>
       <button onClick={this.adicionarServico}>Cadastrar Serviço</button>
     </DivCadastro>
   )

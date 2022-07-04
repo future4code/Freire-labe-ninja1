@@ -1,11 +1,11 @@
 import styled from "styled-components"
-//ok
+
 
 export const CardDosProdutos = styled.div`
-    border: 1px solid black;
+    border: 1px solid red;
     display: flex;
     flex-direction: column;
-  
+   
 img {
    
   width: 200px;
@@ -16,9 +16,14 @@ export const TextCard = styled.div`
 display: flex;
 flex-direction: column;
 
+h3 {
+    margin: 10px;
+   align-self: center;
+}
+
 p {
-    margin: 0 16px;
-    padding:10px;
+    margin: 10px;
+   align-self: center;
 }
 
 button {

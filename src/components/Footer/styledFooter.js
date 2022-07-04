@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
-    background-color: #ffcef9;
-    display: flex;
+    background-color: #35356E;
+    display: block;
     justify-content: center;
     padding: 0.5rem;
     border-top: 1px solid black;
-    color: black;
+    color: white;
     font-size: smaller;
+    width: 100%;
     
     @media(max-width: 550px){
         flex-direction: column;

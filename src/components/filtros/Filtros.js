@@ -9,9 +9,9 @@ const BoxFiltro = styled.div`
 `
 
  class Filtros extends React.Component {
-  
+
     render() {
-    
+
         return <BoxFiltro>
 
            <label>Filtro Mínimo:
@@ -28,7 +28,7 @@ const BoxFiltro = styled.div`
 
            <label>Busca por nome:
             <input type={"text"}
-             value={this.props.busca}
+             value={this.props.nome}
              onChange={this.props.onChangeBuscaNome}/>
            </label>
 

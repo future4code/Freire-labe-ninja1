@@ -6,22 +6,20 @@ import Filtros from "../../components/filtros/Filtros";
 
 const SelectContainer = styled.div`
   border: 1px solid red;
-  margin: 10px;
+  margin: 20px;
 `;
 const ElementosCards = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 10px;
-  margin-top: 10px;
+  margin-left: 45px;
+  width:10px;
 `;
-
-
 export default class Produtos extends React.Component {
   state = {
     filtroMinimo: "",
     filtroMaximo: "",
     filtroBuscaNome: "",
-    ordenacao: ""
   };
   manipulaValorMinimo = (event) => {
     this.setState({ filtroMinimo: event.target.value });
@@ -34,11 +32,6 @@ export default class Produtos extends React.Component {
   manipulaBuscaNome = (event) => {
     this.setState({ filtroBuscaNome: event.target.value });
   };
-//
-//   manipulaOrdenacao = (event) => {
-//     this.setState({ ordenacao: event.target.value })
-// }
-
 
 
   render() {
@@ -68,11 +61,12 @@ export default class Produtos extends React.Component {
       return (
         <CardProdutos
           key={produto.id}
-          imagem={produto.imagem}
+          imagem={produto.imagem} 
           nome={produto.nome}
           alt={produto.nome}
-          dueData={produto.dueData}
           preco={produto.price}
+          dueDate={produto.dueDate}
+          description={produto.description}
           onclick={() => this.props.onClick(produto)}
         />
       );
@@ -88,7 +82,6 @@ export default class Produtos extends React.Component {
             onChangeMinimo={this.manipulaValorMinimo}
             onChangeMaximo={this.manipulaValorMaximo}
             onChangeBuscaNome={this.manipulaBuscaNome}
-            //onChangeOrdenacao={this.manipulaOrdenacao}
           />
 
           <label>Ordenar por:</label>
@@ -106,3 +99,4 @@ export default class Produtos extends React.Component {
     );
   }
 }
+

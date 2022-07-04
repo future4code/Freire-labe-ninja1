@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../src/components/header/header";
-import Homepage from "./pages/HomePage/Homepage";
+import Homepage from "./pages/HomePage/homepage";
 import Produtos from "./HomeCard/Produtos/Produtos";
 import Footer from '../src/components/Footer/Footer';
 import {createGlobalStyle} from 'styled-components';
@@ -13,7 +13,8 @@ const EstiloPadrao = createGlobalStyle`
     padding: 0;
     width: 100vw;
     min-height: 100vh;
-  }`
+  }
+  `
 
 export default class App extends React.Component {
   state = {
@@ -21,17 +22,18 @@ export default class App extends React.Component {
     detalhesDoServico: "",
     carrinho: [],
     adicionados: false,
-    quantidade: 0,
+    quantidadeProdutos: 0,
   };
   
   trocarPagina = (NomePagina) => {
     this.setState({ paginaAtual: NomePagina })
   }
 
-  adicionarCarrinho = (produto) => {
-    const novoCarrinho = [...this.state.carrinho, produto]
+
+  adicionarCarrinho = (servico) => {
+    const novoCarrinho = [...this.state.carrinho, servico]
     this.setState({carrinho: novoCarrinho})
-    alert(`O serviço ${produto.nome} foi adicionado ao carrinho`)
+    alert(`O serviço ${servico.nome} foi adicionado ao carrinho`)
   }
 
   removerCarrinho = (id) => {
@@ -65,14 +67,14 @@ escolherPagina = () => {
 
 }
 
-  render() {
-       return (
+  render () {
+    return (
       <div className="App">
       <EstiloPadrao/>
         <Header trocarPagina= {this.trocarPagina} />
         {this.escolherPagina()}
         <Footer/>
       </div>
-    );
+    )
   }
 }
