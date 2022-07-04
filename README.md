@@ -22,6 +22,9 @@ Olá, vender e contratar no Labeninja é muito mais fácil que você imagina.
 - Adriana Lima
 - Camila Pinheiro
 
+## 📲 Trello da equipe 
+- link: https://trello.com/b/xNgu5VRs/gest%C3%A3o-de-labeninjas
+
 ## 🌐 LINK DO PROJETO
 - Surge: 
 
@@ -30,7 +33,6 @@ Olá, vender e contratar no Labeninja é muito mais fácil que você imagina.
 
 
 
-## 📲 Visão geral - Versão Mobile
 
 
 
